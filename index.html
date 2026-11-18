@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NeonShine — премиальный детейлинг в Астане" />
+  <title>NeonShine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Outfit:wght@400;500;600&family=Sora:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="gate" id="gate" role="dialog" aria-labelledby="gate-title" aria-modal="true">
+    <div class="gate__panel">
+      <p class="gate__brand">NeonShine</p>
+      <h1 id="gate-title">Выберите вариант сайта</h1>
+      <p class="gate__text">Нажмите кнопку — сайт откроется здесь же.</p>
+      <div class="gate__actions">
+        <button type="button" class="gate__btn gate__btn--one" data-variant="1">1 вариант</button>
+        <button type="button" class="gate__btn gate__btn--two" data-variant="2">2 вариант</button>
+        <button type="button" class="gate__btn gate__btn--three" data-variant="3">3 вариант</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="top-actions" id="top-actions" hidden>
+    <button type="button" class="switch-btn" id="switch-btn">Сменить вариант</button>
+    <button type="button" class="call-btn" id="call-btn">Позвонить</button>
+  </div>
+
+  <div class="modal" id="contacts-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="contacts-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
+      <p class="modal__brand">NeonShine</p>
+      <h2 id="contacts-title">Контакты</h2>
+      <p class="modal__text">Напишите или позвоните — ответим быстро</p>
+      <div class="modal__list">
+        <a class="modal__item" id="modal-phone" href="tel:+77000000000">
+          <span class="modal__label">Телефон</span>
+          <span class="modal__value">+7 700 000 00 00</span>
+        </a>
+        <a class="modal__item" id="modal-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="modal__label">WhatsApp</span>
+          <span class="modal__value">Написать</span>
+        </a>
+        <a class="modal__item" id="modal-instagram" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+          <span class="modal__label">Instagram</span>
+          <span class="modal__value">Открыть профиль</span>
+        </a>
+        <div class="modal__item modal__item--static">
+          <span class="modal__label">Адрес</span>
+          <span class="modal__value">г. Астана</span>
+        </div>
+        <div class="modal__item modal__item--static">
+          <span class="modal__label">Режим работы</span>
+          <span class="modal__value">Ежедневно 10:00–22:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Вариант 1 -->
+  <div class="variant variant--1" id="variant-1" hidden>
+    <header class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="brand">NeonShine</p>
+        <h1>Премиальный детейлинг и уход за вашим авто</h1>
+        <p class="hero__lead">Вернем вашей машине состояние новой за 24 часа</p>
+        <a class="btn btn--primary js-cta-hero" href="#">Записаться на осмотр</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="wrap">
+          <h2>Наши услуги</h2>
+          <p class="section__lead">Выберите услугу — и сразу напишите нам в WhatsApp</p>
+          <div class="cards js-services"></div>
+        </div>
+      </section>
+
+      <section class="section why">
+        <div class="wrap">
+          <h2>Почему мы</h2>
+          <ul class="why__list">
+            <li><span class="why__mark" aria-hidden="true"></span><p>Используем только немецкую и американскую автохимию</p></li>
+            <li><span class="why__mark" aria-hidden="true"></span><p>Опыт мастеров от 5 лет</p></li>
+            <li><span class="why__mark" aria-hidden="true"></span><p>Камеры в рабочей зоне — можете следить за своим авто онлайн</p></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__grid">
+        <p class="footer__brand">NeonShine</p>
+        <p>г. Астана</p>
+        <p>Ежедневно с 10:00 до 22:00</p>
+        <p><a class="footer__link js-phone" href="tel:+77000000000">+7 700 000 00 00</a></p>
+        <p>
+          <a class="footer__social js-instagram" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram NeonShine">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.75 1.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            Instagram
+          </a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Вариант 2 -->
+  <div class="variant variant--2" id="variant-2" hidden>
+    <header class="hero">
+      <div class="hero__media" aria-hidden="true"></div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="brand">NeonShine</p>
+        <h1>Премиальный детейлинг и уход за вашим авто</h1>
+        <p class="hero__lead">Вернем вашей машине состояние новой за 24 часа</p>
+        <a class="btn btn--main js-cta-hero" href="#">Записаться на осмотр</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="block">
+        <div class="shell">
+          <div class="block__head">
+            <h2>Наши услуги</h2>
+            <p>Выберите услугу — и сразу напишите нам в WhatsApp</p>
+          </div>
+          <div class="rows js-services"></div>
+        </div>
+      </section>
+
+      <section class="block why">
+        <div class="shell">
+          <h2>Почему мы</h2>
+          <ol class="why__grid">
+            <li><span class="why__num">01</span><p>Используем только немецкую и американскую автохимию</p></li>
+            <li><span class="why__num">02</span><p>Опыт мастеров от 5 лет</p></li>
+            <li><span class="why__num">03</span><p>Камеры в рабочей зоне — можете следить за своим авто онлайн</p></li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="shell foot__row">
+        <p class="foot__brand">NeonShine</p>
+        <p>г. Астана</p>
+        <p>Ежедневно с 10:00 до 22:00</p>
+        <p><a class="js-phone" href="tel:+77000000000">+7 700 000 00 00</a></p>
+        <p>
+          <a class="foot__ig js-instagram" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram NeonShine">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.75 1.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            Instagram
+          </a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Вариант 3 — красный -->
+  <div class="variant variant--3" id="variant-3" hidden>
+    <header class="hero">
+      <div class="hero__photo" aria-hidden="true"></div>
+      <div class="hero__dim" aria-hidden="true"></div>
+      <div class="hero__box">
+        <p class="brand">NeonShine</p>
+        <h1>Премиальный детейлинг и уход за вашим авто</h1>
+        <p class="hero__lead">Вернем вашей машине состояние новой за 24 часа</p>
+        <a class="btn btn--red js-cta-hero" href="#">Записаться на осмотр</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="zone">
+        <div class="frame">
+          <h2>Наши услуги</h2>
+          <p class="zone__lead">Выберите услугу — и сразу напишите нам в WhatsApp</p>
+          <div class="tiles js-services"></div>
+        </div>
+      </section>
+
+      <section class="zone why">
+        <div class="frame">
+          <h2>Почему мы</h2>
+          <ul class="why__bars">
+            <li><strong>01</strong><p>Используем только немецкую и американскую автохимию</p></li>
+            <li><strong>02</strong><p>Опыт мастеров от 5 лет</p></li>
+            <li><strong>03</strong><p>Камеры в рабочей зоне — можете следить за своим авто онлайн</p></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="base">
+      <div class="frame base__grid">
+        <p class="base__brand">NeonShine</p>
+        <p>г. Астана</p>
+        <p>Ежедневно с 10:00 до 22:00</p>
+        <p><a class="js-phone" href="tel:+77000000000">+7 700 000 00 00</a></p>
+        <p>
+          <a class="base__ig js-instagram" href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram NeonShine">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.75 1.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+            Instagram
+          </a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="contacts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
